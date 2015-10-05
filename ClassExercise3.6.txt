@@ -1,0 +1,56 @@
+import javax.swing.JOptionPane;
+public class ClassExercise3_6 {
+	public enum Months {January, March, February, April, May, June, July, August, September, November, October, December}
+
+	public static void main(String[] args) {
+		Months[] choices = { Months.January, Months.February, Months.March, Months.April, Months.May, Months.June,
+				Months.July, Months.August, Months.September, Months.November, Months.October, Months.December};
+		
+		Months input = (Months) JOptionPane.showInputDialog(null,"Select a month.", "months", 
+                JOptionPane.INFORMATION_MESSAGE, null, choices, choices[3]); 
+		
+		switch(input) {
+		
+		case December: case January: case February:
+		JOptionPane.showMessageDialog(null, "Do you want to build a snowman?");
+		break;
+		
+		case March: case April: case May:
+		JOptionPane.showMessageDialog(null, "Happy Spring days!");
+		break;
+		
+		case June: case July: case August:
+		JOptionPane.showMessageDialog(null, "It’s a summer time.");
+		break;
+		
+		case September: case November: case October:
+			JOptionPane.showMessageDialog(null, "Welcome to the foliage season!");
+			break;
+		}
+
+			while (input!=null){
+			input = (Months) JOptionPane.showInputDialog(null,"Select a month.", "months", 
+                                                              JOptionPane.INFORMATION_MESSAGE, null, choices, choices[3]);
+			
+			switch(input) {
+			
+			case December: case January: case February:
+			JOptionPane.showMessageDialog(null, "Do you want to build a snowman?");
+			break;
+			
+			case March: case April: case May:
+			JOptionPane.showMessageDialog(null, "Happy Spring days!");
+			break;
+			
+			case June: case July: case August:
+			JOptionPane.showMessageDialog(null, "It’s a summer time.");
+			break;
+			
+			case September: case November: case October:
+				JOptionPane.showMessageDialog(null, "Welcome to the foliage season!");
+				break;
+			}
+			
+	      } 
+	   }
+	}
