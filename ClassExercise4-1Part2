@@ -1,0 +1,33 @@
+import javax.swing.JOptionPane;
+
+/**
+ * @author Nhi Le
+ * 
+ * The casing does not matter in the username.
+ * Username: Fish
+ * Password: Scale
+ * 
+ */
+public class UserLoginLimit { 
+ public static void main(String[] args) { 
+	 
+	 int attempts = 0;
+	 int MaxAttempts = 3;
+	 
+	 while (attempts < MaxAttempts) {
+	 String Username = JOptionPane.showInputDialog("Enter Username:");
+	 String Password = JOptionPane.showInputDialog("Enter Password:");
+	 
+	 if (Username.equalsIgnoreCase("fish") && Password.equals("Scale")) {
+		 JOptionPane.showMessageDialog(null, "Welcome " + Username + "!");
+		 System.exit(0);
+		 } else {
+			 JOptionPane.showMessageDialog(null, "Please contact your adminstrator to unlock your account!");
+			 attempts= attempts + 1;
+			 }
+	 if (attempts==3) {
+		 JOptionPane.showMessageDialog(null, "Contact Administrator.");
+}
+}
+}
+}
