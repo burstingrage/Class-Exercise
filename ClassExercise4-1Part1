@@ -1,0 +1,80 @@
+import javax.swing.JOptionPane;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+		
+public class UserLogin extends Application {
+	public enum AccountType {Administrator, Student, Staff}
+	public static void main(String[] args) {
+		launch(args);
+    }
+	
+	@Override
+    public void start(Stage primaryStage) {
+		String correctUser = "Fish";
+		String correctPass = "Scale";
+		Label userNameLbl = new Label("UserName");
+		Label passwordLbl = new Label("Password");
+		TextField userNameTxtFld = new TextField();
+        PasswordField pwTxtFld = new PasswordField();
+
+        primaryStage.setTitle("Authentication");
+		
+        Button submitBtn = new Button("Sign in");
+        submitBtn.setOnAction(new EventHandler<ActionEvent>() {
+        	String input = "Fish";
+            String inputPW = "Scale";
+            
+        	public void handle(ActionEvent arg0) {
+        		input = userNameTxtFld.getText();
+        		inputPW = pwTxtFld.getText();
+        		int attempts = 1;
+        		int MaxAttempts = 3;
+        		
+        	if (correctUser.equals(input) && correctPass.equals(inputPW)) {
+        		JOptionPane.showMessageDialog(null,  "Welcome " + input + "!");
+        		AccountType[] choices = { AccountType.Administrator, AccountType.Student, AccountType.Staff }; 
+                AccountType input = (AccountType) JOptionPane.showInputDialog(null,"Select your account type.", "Account Type", 
+                                                                              JOptionPane.INFORMATION_MESSAGE, null, choices, choices[2]);
+                
+                switch (input) {
+   		 case Student:
+   				JOptionPane.showMessageDialog(null, "Welcome Student!");
+   				System.exit(0);
+   				break;
+   		 case Administrator:
+   			 JOptionPane.showMessageDialog(null, "Wrong account type! Please choose your correct account type.");
+   				break;
+   		 case Staff:
+   			 JOptionPane.showMessageDialog(null, "Wrong account type! Please choose your correct account type.");
+   				break;
+                }
+        	} else {
+        		JOptionPane.showMessageDialog(null,  "Failed Authentication!");
+        	}
+        		}});
+        
+        GridPane grid = new GridPane();
+        grid.setAlignment(Pos.CENTER);
+        grid.setVgap(10);
+        grid.setHgap(10);
+        grid.add(userNameLbl,0,0);
+        grid.add(passwordLbl,0,1);
+        grid.add(userNameTxtFld,1,0);
+        grid.add(pwTxtFld,1,1);
+        grid.add(submitBtn,1,2);
+        
+        Scene scene = new Scene(grid,500,300);
+        primaryStage.setScene(scene);
+        primaryStage.show();        
+}
+}
