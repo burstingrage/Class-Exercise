@@ -1,0 +1,23 @@
+import java.awt.Graphics;
+import javax.swing.JApplet;
+
+public class TicTacToe extends JApplet {
+
+	public void paint(Graphics canvas) {
+		canvas.drawLine(70,10,70,200);
+		canvas.drawLine(140,10,140,200);
+		canvas.drawLine(10,70,200,70);
+		canvas.drawLine(10,140,200,140);
+		canvas.drawOval(15, 15, 50, 50);
+		canvas.drawOval(145, 15, 50, 50);
+		canvas.drawOval(80, 145, 50, 50);
+		canvas.drawLine(15,80,60,130);
+		canvas.drawLine(60,80,15,130);
+		canvas.drawLine(80,80,130,130);
+		canvas.drawLine(130,80,80,130);
+		canvas.drawLine(150,80,192,130);
+		canvas.drawLine(192,80,150,130);
+
+	}
+
+}
