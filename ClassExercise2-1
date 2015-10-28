@@ -1,0 +1,45 @@
+/**
+ * Class Exercise 2.1 Delimiters and Scanners
+ * @author ntl2866 (AKA Nhi Le)
+ * Created on 10 October 2015
+ * 
+ */
+import java.util.Scanner;
+
+public class Delimiter {
+	public static void main(String []arg) {
+		//Inputs shall be integers
+		int n1, n2, n3, n4, n5, n6, n7, n8, n9, n10;
+		
+		//Used for calculation
+		int average, sum;
+		
+		//Scans for input
+		Scanner keyboard1 = new Scanner(System.in);
+		
+		//Delimiter acting as space
+		keyboard1.useDelimiter("#");
+		
+		//Prints instructions to enter 10 numbers
+		System.out.println("Enter 10 numbers (delimted by #):");
+		
+		//input for 10 numbers in a single line
+		n1 = keyboard1.nextInt();
+		n2 = keyboard1.nextInt();
+		n3 = keyboard1.nextInt();
+		n4 = keyboard1.nextInt();
+		n5 = keyboard1.nextInt();
+		n6 = keyboard1.nextInt();
+		n7 = keyboard1.nextInt();
+		n8 = keyboard1.nextInt();
+		n9 = keyboard1.nextInt();
+		n10 = keyboard1.nextInt();
+		
+		//Calculation
+		average = (n1+n2+n3+n4+n5+n6+n7+n8+n9+n10)/10;
+		
+		//Prints average number
+		System.out.println("Your average is:\n\t\"" +  average + "\"");
+
+}
+}
