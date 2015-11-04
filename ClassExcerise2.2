@@ -1,0 +1,44 @@
+/**
+ * Author: Nhi Le
+ * Date: 11/3/15
+ * Email: ntl2866@email.vccs.edu
+ */
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class echoProgram {
+	public static void main(String[] args) {
+		byte num1;
+		short num2;
+		int num3;
+		long num4;
+		float num5;
+		double num6;
+		char num7;
+		boolean n1;
+		
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter 1 (byte) number:");
+		num1 = keyboard.nextByte();
+		System.out.println("Enter next (short) number:");
+		num2 = keyboard.nextShort();
+		System.out.println("Enter next (int) number:");
+		num3 = keyboard.nextInt();
+		System.out.println("Enter next (long) number:");
+		num4 = keyboard.nextLong();
+		System.out.println("Enter next (float) number:");
+		num5 = keyboard.nextFloat();
+		System.out.println("Enter next (double) number:");
+		num6 = keyboard.nextDouble();
+		System.out.println("Enter a (char) letter:");
+		num7 = keyboard.next().charAt(0);
+		
+		JOptionPane.showMessageDialog(null, "The byte number is \"" + num1 + "\" \n" +
+											"The short number is " + num2 + "\n" +
+											"The int number is \"" + num3 + "\" \n" +
+											"The long number is \"" + num4 + "\" \n" +
+											"The float number is \"" + num5 + "\" \n" +
+											"The double number is \"" + num6 + "\" \n" +
+											"The char letter is \"" + num7 + "\"");
