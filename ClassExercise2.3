@@ -1,0 +1,26 @@
+/**
+ * Created by Nhi Le (ntl2866)
+ * Date: 11/9/15
+ * Purpose: Covert cm to feet and inches
+ */
+
+import javax.swing.JOptionPane;
+
+public class cmTOft {
+	public static void main(String[] args) {
+		String cm;
+		double NUMcm, ftSUM, inSUM, cmSUM;
+		
+		cm = JOptionPane.showInputDialog(null, "Enter your height in cm:");
+		NUMcm = Double.parseDouble(cm);
+		inSUM = NUMcm * 0.39;
+		ftSUM = inSUM / 12;
+		cmSUM = inSUM * 2.54;
+		 JOptionPane.showMessageDialog(null, "Your height in cm is: " + cm + "\n" +
+				 							"Your height in inches is: " + inSUM + "\n" +
+				 							"Your height in feet is: " + ftSUM);
+		
+		
+	}
+
+}
