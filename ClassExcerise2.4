@@ -1,0 +1,71 @@
+/**
+ * Title: Class Exercise 2.4
+ * @author Nhi Le (ntl2866)
+ * Date: 11/11/15
+ */
+
+public class StringClass {
+	public static void main(String [] args) {
+		//charAT
+		String letter = new String("banana");
+		System.out.println("I will print the first letter of " + letter + ": "+ letter.charAt(0));
+		
+		//concat(a_String)
+		System.out.println("Concat: " + "Help".concat(" Hide"));
+		
+		//equals(a_string)
+		String dog = "dog";
+		System.out.println("Does dog equal cats?: " + dog.equals("cats"));
+		
+		//equalsIgnoreCase
+		String dragon = "fire";
+		if (dragon.equalsIgnoreCase("FIRE")) {
+			System.out.println("If dragon equals FIRE(ignore casing), then Dragon breathes " + dragon + ".");
+		} else { 
+			System.out.println("If dragon did not equal fire, then Dragon did not breathe fire.");
+		}
+		
+		//indexOf
+		String sentence = "Where is there?";
+		int a = sentence.indexOf("er");
+		System.out.println("There are " + a + " \"er" + "\" " + "in " + "\"" + sentence + "\"" + ".");
+		
+		//lastIndexOf (a_string)
+		String palindrome = "bow wow";
+		int b = palindrome.lastIndexOf("wo");
+		System.out.println("There are " + b + " \"" + "wo\" (read backwards and forwards) in the word \"" + palindrome + "\"" + "." );
+		
+		//toLowerCase()
+		String village = "VILLAGE";
+		String lowercase;
+		lowercase = village.toLowerCase();
+		System.out.println(village + " to lowercase is: " + lowercase);
+		
+		//toUpperCase()
+		String blue = "blue", green;
+		green = blue.toUpperCase();
+		System.out.println(blue + " to uppercase is: " + green);
+		
+		//replace(oldChar,newChar)
+		String run = "Run", bun;
+		bun = run.replace('R', 'b');
+		System.out.println(run + " will become "+ bun + " when I replace the first letter with \"b\".");
+		
+		//substring(start)
+		String happy = "happy";
+		String emotion;
+		emotion = happy.substring(2);
+		System.out.println("I will grab the last letters from happy except for the first 2 letters: " + emotion);
+		
+		//substring(star,end)
+		String bird = "chirp";
+		String seeds;
+		seeds = bird.substring(1, 4);
+		System.out.println("I will grab 3 letters from chirp after \"ch\": " + seeds);
+		
+		//trim()
+		String trim = "   Please trim this sentence   ";
+		System.out.println("\"" + trim + "\"" + " will be trimmed down to: \"" + trim.trim() + ".\"");
+	}
+
+}
