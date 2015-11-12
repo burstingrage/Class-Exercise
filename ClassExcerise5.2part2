@@ -1,0 +1,37 @@
+
+public class PersonClass {
+	private String name;
+	private int age;
+	
+	public PersonClass() {
+		this.name = "";
+		this.age = 0;
+	}
+	
+	public PersonClass(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+	
+	public String getname() {
+		return this.name;
+	}
+	
+	public void setname(String name) {
+		this.name = name;
+	}
+	
+	public int getAge() {
+		return this.age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public String toString() {
+		return "Person's name is " + this.name + " and their age is " + this.age
+		+ ".";
+	}
+
+}
