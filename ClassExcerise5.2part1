@@ -1,3 +1,9 @@
+/**
+ * Title: Class Exercise 5.2
+ * author: Nhi Le (ntl2866)
+ * Date: 11/12/15
+ */
+
 import java.util.Scanner;
 
 public class CreateClass {
