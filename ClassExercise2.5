@@ -1,0 +1,45 @@
+/**
+ * Title: Class Exercise 2.5 - Cent Converter
+ * Author: Nhi Le (ntl2866)
+ * Date: 11 December, 2015
+ */
+
+import javax.swing.JOptionPane;
+
+public class CentConverter {
+
+	public static void main(String[] args) {
+		//Variables
+		double total;
+		double amount;
+		double quarters;
+		double dimes;
+		double nickles;
+		
+		//User input on JOptionPane
+		String amountString = JOptionPane.showInputDialog("Enter an amount and it will be converted to cents \n(please use 2 decimal places):");
+		amount = Double.parseDouble(amountString);
+		amount = amount*100;
+		
+		//Calculation of amount entered by user
+		quarters = amount / 25;
+		amount = amount % 25;
+		dimes = amount / 10;
+		amount = amount % 10;
+		nickles = amount / 5;
+		amount = amount % 5;
+		
+		//Rounds answers to integers
+		double Q = Math.floor(quarters);
+		double D = Math.floor(dimes);
+		double N = Math.floor(nickles);
+		double A = Math.floor(amount);
+		
+		//Displays amount into cents
+		JOptionPane.showMessageDialog(null, "Your total cents of $" + amountString + " is \nQuarters: " + Q + "\n" + "Dimes: "
+		+ D + "\n" + "Nickles: " + N + "\n" + "Pennies: " + A);
+		
+
+	}
+
+}
