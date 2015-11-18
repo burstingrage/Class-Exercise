@@ -1,0 +1,51 @@
+
+public class LoopReview {
+	public static void main(String[] args) {
+		int odd = 1;
+		int y = 1;
+		int Limit = 100;
+		
+		System.out.println("I will print all odd numbers under 100:");
+		while (y < Limit) {
+			System.out.println(odd);
+			odd = odd + 2;
+			y = y + 2;
+		}
+		{
+			int even = 0;
+			int n = 0;
+			System.out.println("\nI will print all even numbers under 100");
+			while (n <= Limit) {
+				System.out.println(even);
+				even = even + 2;
+				n = n + 2;
+			}
+		}
+		{
+			System.out.println("\nI will now print a diamond:");
+		int x = 0;
+		
+		while (x <= 0) {
+			System.out.println("  *");
+			x++;
+		}
+		while (x <= 1) {
+			System.out.println(" ***");
+			x++;
+		}
+		while (x <= 2) {
+			System.out.println("*****");
+			x++;
+		}
+		while (x <= 3) {
+			System.out.println(" ***");
+			x++;
+		}
+		while (x <= 4) {
+			System.out.println("  *");
+			x++;
+		}
+	}
+
+}
+}
